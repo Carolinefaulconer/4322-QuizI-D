@@ -18,21 +18,21 @@ with open ("employee_data.csv", "r") as input_file:
 
 
 #create an empty dictionary
- empol_dict={} 
+ empol_dict= {} 
  
 
 #use a loop to iterate through the csv file
 for row in reader: 
     
      if row['Department'] == 'Marketing'  row['Title'] == 'Customer Service Represetatives':
-        empol_dict[row['First Name'] + ' ' + row['Last Name']] = (row['Salary']) * 1.0
+        empol_dict[row['First Name'] +  row['Last Name']] = (row['Salary']) * .1
     
 
 
-   for name, new_salary in empol_dict.items():
+   for name, nsalary in empol_dict.items():
         current_salary = row['Salary']
         print(f"{name}: Current Salary: ${current_salary:.2f})")
-        print(f"{name}: New Salary: ${new_salary:.2f}")
+        print(f"{name}: New Salary: ${nsalary:.2f}")
 
 
 
@@ -47,7 +47,7 @@ print('=========================================')
 print()
 
 #iternate through the dictionary and print out the key and value as per printout
-print(empol_dict)
+#print(empol_dict)
 
 
 
