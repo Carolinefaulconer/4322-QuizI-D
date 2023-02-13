@@ -24,16 +24,15 @@ with open ("employee_data.csv", "r") as input_file:
 #use a loop to iterate through the csv file
 for row in reader: 
     
-    ID = row[0]
-    first_name= row[1]
-    last_name= row[2]
-    salary= row[5]
+     if row['Department'] == 'Marketing'  row['Title'] == 'Customer Service Represetatives':
+        empol_dict[row['First Name'] + ' ' + row['Last Name']] = (row['Salary']) * 1.0
     
 
 
-   for i, row in empol_dict.items(): 
-     print(f" Managers Name: {first_name}, {last_name}")
-    print(f" Current Salary: {salary}")
+   for name, new_salary in empol_dict.items():
+        current_salary = row['Salary']
+        print(f"{name}: Current Salary: ${current_salary:.2f})")
+        print(f"{name}: New Salary: ${new_salary:.2f}")
 
 
 
